@@ -1,4 +1,4 @@
-####The project is not actually online yet, hopefully I'll get around to that tonight.
+### This is still an alpha version, expect bugs.
 
 Hi there,
 
