@@ -1,3 +1,5 @@
+####The project is not actually online yet, hopefully I'll get around to that tonight.
+
 Hi there,
 
 This is a simple Picross puzzle build with JQuery.
@@ -18,3 +20,4 @@ Compass App (http://compass.kkbox.com/)
 JQuery (https://jquery.com/)
 JS-Cookie (https://github.com/js-cookie/js-cookie)
 JsRender (https://www.jsviews.com/)
+Atom (https://atom.io/)
