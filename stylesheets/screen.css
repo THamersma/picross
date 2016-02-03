@@ -1,0 +1,647 @@
+@charset "UTF-8";
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 5, ../../../../compass.app/lib/ruby/compass_1.0/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../compass.app/lib/ruby/compass_1.0/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../compass.app/lib/ruby/compass_1.0/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../compass.app/lib/ruby/compass_1.0/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../compass.app/lib/ruby/compass_1.0/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../compass.app/lib/ruby/compass_1.0/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../compass.app/lib/ruby/compass_1.0/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../compass.app/lib/ruby/compass_1.0/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../compass.app/lib/ruby/compass_1.0/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 12, ../sass/screen.scss */
+html,
+body {
+  height: 100%;
+  min-height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #a3a3a3;
+}
+
+/* line 22, ../sass/screen.scss */
+#mainContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  position: absolute;
+  height: 420px;
+  width: 800px;
+  background-image: url("../images/blackboard.jpg");
+  box-shadow: 1px 1px 2px #3c3c3c;
+  border: 5px outset #e8cea7;
+  zoom: 2;
+  -moz-transform: scale(2) translate(-25%, -25%);
+}
+/* line 34, ../sass/screen.scss */
+#mainContainer #leftPart, #mainContainer #mainPart, #mainContainer #rightPart {
+  height: 300px;
+  width: 200px;
+  float: left;
+  margin: auto;
+  position: relative;
+}
+/* line 42, ../sass/screen.scss */
+#mainContainer #mainPart {
+  width: 400px;
+  top: 1%;
+}
+/* line 47, ../sass/screen.scss */
+#mainContainer #mainPart #main {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  position: relative;
+  height: 200px;
+  left: 60%;
+  width: 200px;
+  border: 5px solid #bcc;
+  z-index: 2;
+}
+/* line 62, ../sass/screen.scss */
+#mainContainer img {
+  position: absolute;
+}
+
+/* line 67, ../sass/screen.scss */
+.active {
+  background-color: #555;
+}
+
+/* line 71, ../sass/screen.scss */
+.disabled {
+  opacity: 0.4;
+}
+
+/* line 75, ../sass/screen.scss */
+#overlay {
+  height: 100%;
+  width: 100%;
+  background-color: #555;
+  opacity: 0.5;
+  z-index: 9;
+  position: absolute;
+  display: none;
+}
+
+/* line 85, ../sass/screen.scss */
+#messageHolder {
+  position: absolute;
+  height: 150px;
+  width: 300px;
+  background-color: #0092c9;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  display: none;
+  border-radius: 5px;
+}
+/* line 95, ../sass/screen.scss */
+#messageHolder #victoryMessage {
+  height: 100px;
+  width: 300px;
+  background-color: #0092c9;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  position: relative;
+}
+/* line 104, ../sass/screen.scss */
+#messageHolder #victoryMessage #checkMark {
+  float: left;
+  margin: 0 auto;
+  height: 60px;
+  width: 60px;
+  background-color: #35ddb7;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 100%;
+}
+/* line 143, ../sass/screen.scss */
+#messageHolder #victoryMessage #message {
+  float: left;
+  margin: 0 auto;
+  height: 60px;
+  width: 200px;
+  background-color: #30c6ff;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 5px;
+}
+/* line 156, ../sass/screen.scss */
+#messageHolder #clearMessageButton {
+  position: absolute;
+  right: 10%;
+  height: 30px;
+  width: 90px;
+  border-radius: 5px;
+  background-color: #005a7d;
+  border: none;
+  cursor: pointer;
+}
+
+/* line 5, ../sass/_hintPart.scss */
+#topIndicator {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  position: absolute;
+  left: 35%;
+  bottom: 51.5%;
+  margin-left: -5px;
+  z-index: 1;
+}
+/* line 12, ../sass/_hintPart.scss */
+#topIndicator .topIndicatorRow {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  position: relative;
+  flex-direction: column-reverse;
+  width: 20px;
+  min-height: 100px;
+  bottom: 100px;
+}
+/* line 19, ../sass/_hintPart.scss */
+#topIndicator .topIndicatorRow:first-child {
+  border-left: 5px solid #bcc;
+}
+/* line 22, ../sass/_hintPart.scss */
+#topIndicator .topIndicatorRow:last-child {
+  border-right: 5px solid #bcc;
+}
+
+/* line 28, ../sass/_hintPart.scss */
+#sideIndicator {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  position: absolute;
+  flex-direction: column;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 41%;
+  z-index: 1;
+}
+/* line 36, ../sass/_hintPart.scss */
+#sideIndicator .sideIndicatorRow {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  position: relative;
+  flex-direction: row-reverse;
+  height: 20px;
+  min-width: 100px;
+  left: -100px;
+}
+/* line 43, ../sass/_hintPart.scss */
+#sideIndicator .sideIndicatorRow:first-child {
+  border-top: 5px solid #bcc;
+}
+/* line 46, ../sass/_hintPart.scss */
+#sideIndicator .sideIndicatorRow:last-child {
+  border-bottom: 5px solid #bcc;
+}
+
+/* line 52, ../sass/_hintPart.scss */
+.topIndicatorBlock, .sketchBlock,
+.sideIndicatorBlock {
+  transition-property: background-color, color, opacity, border-color;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+  float: left;
+  height: 20px;
+  width: 20px;
+  text-align: center;
+  box-sizing: border-box;
+  cursor: pointer;
+  background-color: #494949;
+  color: #adadad;
+  border-right: 1px solid #595959;
+  border-bottom: 1px solid #595959;
+}
+
+/* line 4, ../sass/_PuzzlePart.scss */
+.sketchBlock {
+  background-color: #fff;
+  color: #000;
+  border-bottom: 1px solid #e5e5e5;
+  border-right: 1px solid #e5e5e5;
+}
+/* line 11, ../sass/_PuzzlePart.scss */
+.sketchBlock:nth-child(5n) {
+  border-right: 1px solid #b2b2b2;
+}
+
+/* line 4, ../sass/_buttons.scss */
+#buttons {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  position: relative;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  flex-direction: column;
+  background-color: #0092c9;
+  border-radius: 5px;
+  box-shadow: 1px 1px 2px #3c3c3c;
+}
+/* line 12, ../sass/_buttons.scss */
+#buttons .button {
+  height: 26px;
+  width: 26px;
+  border: 2px solid transparent;
+  border-radius: 100%;
+  background-color: #fff;
+  margin: auto;
+  z-index: 1;
+  transition-property: background-color, color, opacity, border-color;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+  cursor: pointer;
+}
+/* line 23, ../sass/_buttons.scss */
+#buttons .button i {
+  z-index: 2;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+/* line 30, ../sass/_buttons.scss */
+#buttons .button:hover {
+  border-color: #aaa;
+}
+/* line 34, ../sass/_buttons.scss */
+#buttons .button.activeButton, #buttons .button.activeButton:hover, #buttons #puzzleSelectorHolder .button.puzzleSelector.finishedPuzzle.activeButton:hover::after, #puzzleSelectorHolder #buttons .button.puzzleSelector.finishedPuzzle.activeButton:hover::after {
+  border-color: #555;
+}
+
+/* line 44, ../sass/_buttons.scss */
+#puzzleSelectorHolder {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  position: relative;
+  flex-direction: column;
+  background-color: #0092c9;
+  border-radius: 5px;
+  flex-flow: wrap;
+  width: 110px;
+  height: 200px;
+  overflow: hidden;
+  box-shadow: 1px 1px 2px #3c3c3c;
+}
+/* line 56, ../sass/_buttons.scss */
+#puzzleSelectorHolder .puzzleSelector {
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+  margin: auto;
+  background-color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  box-sizing: border-box;
+  transition-property: background-color, color, opacity, border-color;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+  display: none;
+  box-sizing: border-box;
+  position: relative;
+}
+/* line 70, ../sass/_buttons.scss */
+#puzzleSelectorHolder .puzzleSelector p {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+/* line 76, ../sass/_buttons.scss */
+#puzzleSelectorHolder .puzzleSelector.finishedPuzzle {
+  border: 4px solid #35ddb7;
+}
+/* line 79, ../sass/_buttons.scss */
+#puzzleSelectorHolder .puzzleSelector.finishedPuzzle.activeButton, #puzzleSelectorHolder .puzzleSelector.finishedPuzzle.activeButton:hover, #puzzleSelectorHolder .puzzleSelector.finishedPuzzle.activeButton:hover::after {
+  border: 4px solid #199378;
+}
+/* line 91, ../sass/_buttons.scss */
+#puzzleSelectorHolder .puzzleSelector.finishedPuzzle::after {
+  content: '✔';
+  height: 14px;
+  width: 14px;
+  background-color: #199378;
+  position: absolute;
+  border-radius: 100%;
+  top: -4px;
+  right: -4px;
+  font-size: 14px;
+  color: #fff;
+}
+/* line 105, ../sass/_buttons.scss */
+#puzzleSelectorHolder .puzzleSelector:hover {
+  border: 2px solid #aaa;
+}
+/* line 109, ../sass/_buttons.scss */
+#puzzleSelectorHolder .puzzleSelector.activeButton, #puzzleSelectorHolder .puzzleSelector.finishedPuzzle.activeButton:hover, #puzzleSelectorHolder .puzzleSelector.finishedPuzzle.activeButton:hover::after, #puzzleSelectorHolder .puzzleSelector.activeButton:hover {
+  border: 2px solid #555;
+}
+
+/* line 119, ../sass/_buttons.scss */
+.selectorFiller {
+  height: 50px;
+  width: 50px;
+  margin: auto;
+  background-color: transparent;
+  cursor: default;
+  display: block;
+}
+/* line 127, ../sass/_buttons.scss */
+.selectorFiller:hover {
+  border: none;
+}
+
+/* line 132, ../sass/_buttons.scss */
+#puzzlesContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* line 136, ../sass/_buttons.scss */
+#upNavigator {
+  height: 20px;
+  width: 20px;
+  background-color: transparent;
+  transform: rotate(-45deg);
+  position: absolute;
+  top: -8%;
+  left: 38%;
+  z-index: 1;
+  cursor: pointer;
+  display: none;
+  border-style: solid;
+  border-width: 3px;
+  border-color: #fff;
+  border-left-color: transparent;
+  border-bottom-color: transparent;
+}
+
+/* line 160, ../sass/_buttons.scss */
+#downNavigator {
+  height: 20px;
+  width: 20px;
+  background-color: transparent;
+  transform: rotate(-45deg);
+  position: absolute;
+  top: auto;
+  bottom: -8%;
+  left: 38%;
+  z-index: 1;
+  cursor: pointer;
+  display: none;
+  border-style: solid;
+  border-width: 3px;
+  border-color: #fff;
+  border-top-color: transparent;
+  border-right-color: transparent;
+}
+
+/* line 185, ../sass/_buttons.scss */
+#upNavigator::after {
+  height: 0;
+  width: 0;
+  background-color: transparent;
+  content: '';
+  position: absolute;
+  left: 6px;
+  z-index: 1;
+  transition-property: background-color, color, opacity, border-color;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+  border-style: solid;
+  border-width: 7px;
+  border-color: transparent;
+  border-top-color: #bcc;
+  border-right-color: #bcc;
+}
+
+/* line 207, ../sass/_buttons.scss */
+#downNavigator::after {
+  height: 0;
+  width: 0;
+  background-color: transparent;
+  content: '';
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+  transition-property: background-color, color, opacity, border-color;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+  border-style: solid;
+  border-width: 7px;
+  border-color: #bcc;
+  border-top-color: transparent;
+  border-right-color: transparent;
+}
+
+/* line 229, ../sass/_buttons.scss */
+#upNavigator:hover::after {
+  border-style: solid;
+  border-width: 7px;
+  border-color: transparent;
+  border-top-color: #0092c9;
+  border-right-color: #0092c9;
+}
+
+/* line 243, ../sass/_buttons.scss */
+#downNavigator:hover::after {
+  border-style: solid;
+  border-width: 7px;
+  border-color: #0092c9;
+  border-top-color: transparent;
+  border-right-color: transparent;
+}
+
+/* line 1, ../sass/_typography.scss */
+.puzzleSelector p,
+.ABC {
+  font-family: 'Open Sans Condensed';
+  font-weight: 500;
+}
+
+/* line 7, ../sass/_typography.scss */
+.ABC {
+  font-weight: 800;
+}
+
+/* line 11, ../sass/_typography.scss */
+.blackboardScribble {
+  font-family: 'Amatic SC';
+  color: #fff;
+}
+
+/* line 16, ../sass/_typography.scss */
+#message,
+#checkMark,
+#clearMessageButton {
+  color: #fff;
+  font-family: 'Open Sans Condensed';
+  font-weight: 500;
+  text-align: center;
+  font-size: 50px;
+}
+
+/* line 26, ../sass/_typography.scss */
+#clearMessageButton {
+  font-size: 24px;
+  line-height: 24px;
+}
+
+/* line 31, ../sass/_typography.scss */
+.button {
+  text-align: center;
+}
+/* line 34, ../sass/_typography.scss */
+.button i {
+  color: #555;
+  font-size: 20px;
+}
+
+/* line 40, ../sass/_typography.scss */
+.topIndicatorBlock, .sketchBlock,
+.sideIndicatorBlock {
+  font-family: 'Open Sans Condensed';
+}
+
+/* line 22, ../sass/_extras.scss */
+#paper0 {
+  bottom: 2%;
+  right: 3%;
+  z-index: 2;
+  transform: rotate(-29deg);
+}
+
+/* line 29, ../sass/_extras.scss */
+#paper1 {
+  bottom: 1%;
+  right: 4%;
+  z-index: 1;
+  transform: rotate(-10deg);
+}
+
+/* line 74, ../sass/_extras.scss */
+.blackboardScribble {
+  position: absolute;
+  font-size: 44px;
+}
+
+/* line 79, ../sass/_extras.scss */
+[id*="formula"] p span {
+  font-size: 17px;
+  position: relative;
+  top: -10px;
+}
+
+/* line 85, ../sass/_extras.scss */
+#formula1 {
+  left: 72%;
+  top: 29%;
+  transform: rotate(-20deg);
+}
+/* line 90, ../sass/_extras.scss */
+#formula1 p span {
+  top: -20px;
+}
+
+/* line 95, ../sass/_extras.scss */
+#formula2 {
+  font-size: 30px;
+  left: 3%;
+  top: 88%;
+  transform: rotate(4deg);
+}

@@ -1,0 +1,100 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8">
+	<title>Test Area</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700,300italic' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Amatic+SC:400,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="stylesheets/screen.css" media="screen, projection" type="text/css" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="scripts/js.cookie.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jsrender/0.9.71/jsrender.js"></script>
+	<script id="puzzleSelectorTemplate" type="text/x-jsrender">
+		<div class="puzzleSelector"  id="{{:name}}">
+			<p>{{:name}}</p>
+		</div>
+	</script>
+	<script id="backwallABCTemplate" type="text/x-jsrender">
+		<div class="ABC"  id="{{:name}}">
+		<div class="abcTopBar"></div>
+			<p>{{:name}}</p>
+		</div>
+	</script>
+	<script id="scribbleTemplate" type="text/x-jsrender">
+		<div class="blackboardScribble"  id="{{:name}}">
+			<p>{{:text}}</p>
+		</div>
+	</script>
+</head>
+
+<body>
+	<div id="overlay">
+	</div>
+	<div id="messageHolder">
+		<div id="victoryMessage">
+				<div id="checkMark">
+					✔
+				</div>
+			<div id="message">
+				Congrats!
+			</div>
+		</div>
+		<button id="clearMessageButton">OK!</button>
+	</div>
+	<div id="backWall">
+		<div id="backwallABCTemplateHolder">
+		</div>
+	<div id="mainContainer">
+		<div id="scribbleHolder">
+		</div>
+		<div id="leftPart">
+			<div id="puzzlesContainer">
+				<div id="upNavigator">
+				</div>
+				<div id="downNavigator">
+				</div>
+				<div id="puzzleSelectorHolder">
+				</div>
+			</div>
+		</div>
+		<div id="mainPart">
+			<div id="topIndicator">
+			</div>
+			<div id="main">
+				<div class='sketchBlock'></div>
+			</div>
+			<div id="sideIndicator">
+			</div>
+		</div>
+		<div id="rightPart">
+			<div id="buttons">
+				<div id="enabler" class="button">
+					<i class="fa fa-pencil"></i>
+				</div>
+				<div id="disabler" class="button">
+					<i class="fa fa-close"></i>
+				</div>
+				<div id="neutraliser" class="button">
+					<i class="fa fa-eraser"></i>
+				</div>
+				<div id="trasher" class="button">
+					<i class="fa fa-trash"></i>
+				</div>
+				<!-- <div id="creator" class="button">
+					<i class="fa fa-edit"></i>
+				</div> -->
+			</div>
+		</div>
+		<img id="paper0" src="images/paper-pinned.gif"></img>
+		<img id="paper1" src="images/paper-pinned.gif"></img>
+	</div>
+</div>
+
+<script src="scripts/scripts.js"></script>
+<script src="scripts/puzzles.js"></script>
+<script src="scripts/solutions.js"></script>
+<script src="scripts/templates.js"></script>
+</body>
+</html>
