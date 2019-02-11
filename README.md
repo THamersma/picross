@@ -3,7 +3,7 @@
 Hi there,
 
 This is a simple Picross puzzle build with JQuery.
-This is the first thing I've ever built and I do not have a background in programming, so it probably does not have the cleanest of most efficient code around. This was more of a test for myself.
+This is the first thing I've ever built and I do not have a background in programming, so it probably does not have the cleanest or most efficient code around. This was more of a test for myself.
 I like picross puzzles and I wanted to try to learn some JQuery, so I decided to build this.
 
 Before I made this I knew a bit of HTML, CSS and a tiny bit of JQuery. It took me about 5 days to come this far.
